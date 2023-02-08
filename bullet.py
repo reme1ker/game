@@ -1,5 +1,6 @@
 import pygame
-
+import os
+ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 class Bullet(pygame.sprite.Sprite):
 
@@ -9,7 +10,7 @@ class Bullet(pygame.sprite.Sprite):
         self.screen = screen
         # self.rect = pygame.Rect(0, 0, 2, 12)
         # self.color = 12, 120, 2
-        self.image = pygame.image.load('C:/Users/stank/PycharmProjects/game/arts/pulka_1.png')
+        self.image = pygame.image.load(f'{ROOT_PATH}/arts/pulka_1.png')
         self.rect = self.image.get_rect()
         self.speed = 0.5
         self.rect.centerx = gun.rect.centerx

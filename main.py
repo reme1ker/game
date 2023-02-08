@@ -2,7 +2,8 @@ import pygame, movement
 from gun import Gun
 from pygame.sprite import Group
 import random
-
+import os
+ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 def ebaniyRot():
     r = random.randint(0,255)

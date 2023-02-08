@@ -1,4 +1,6 @@
 import pygame
+import os
+ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 class Gun():
 
@@ -6,7 +8,7 @@ class Gun():
         """Инициализация пушки"""
 
         self.screen = screen
-        self.image = pygame.image.load('C:/Users/stank/PycharmProjects/game/arts/pixil-frame-0.png')
+        self.image = pygame.image.load(f'{ROOT_PATH}/arts/pixil-frame-0.png')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         self.rect.centerx = self.screen_rect.centerx
